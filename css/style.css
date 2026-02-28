@@ -1,0 +1,93 @@
+/* 1. Global CSS Variables for Easy Theming */
+:root {
+    --bg-color: #09090b; /* Deep slate/black */
+    --text-main: #f8fafc; /* Off-white for readability */
+    --text-muted: #94a3b8; /* Gray for secondary text */
+    --accent-color: #2563eb; /* Sharp engineering blue */
+    --accent-hover: #1d4ed8;
+    --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. Hard Reset for Cross-Browser Consistency */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Base Typography & Body */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Global Layout constraints */
+main, header, footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 5. The Hero Section (Above the Fold) */
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    padding-top: 4rem;
+}
+
+#hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05rem;
+}
+
+#hero-section h2 {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+/* 6. The Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+    width: fit-content;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* 7. Section Spacing */
+section {
+    padding: 5rem 0;
+    border-bottom: 1px solid #1e293b;
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 800px;
+}
